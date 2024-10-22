@@ -1,0 +1,95 @@
+{%  extends 'index.html' %}
+
+{% load static%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ </head>
+<body>    
+
+{% block contant%}
+<div class="heading"> 
+    <h1>FEES STRUCTURES</h1>
+</div>
+
+<div class="card">
+    <!-- Repeat for each card-item -->
+    <div class="card-item">
+        <a href="{% url 'software' %}"> <img src="{% static 'images/Frontend Development.jpeg' %}" alt="Frontend Development"></a>
+        <h3>Frontend Development: ₹10,000</h3>
+    </div>
+    <div class="card-item">
+       <a href="{% url 'software' %}"><img src="{% static 'images/Backend Development.jpeg' %}" alt="Backend Development"></a> 
+        <h3>Backend Development: ₹12,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/Full-Stack Development.jpeg' %}" alt="Full-Stack Development"></a>
+        <h3>Full-Stack Development: ₹15,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/Artificial Intelligence.jpeg' %}" alt="Artificial Intelligence"></a>
+        <h3>Artificial Intelligence: ₹20,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/Blockchain Technology.jpeg' %}" alt="Blockchain Technology">
+        <h3>Blockchain Technology: ₹20,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/Cloud Computing image.jpeg' %}" alt="Cloud Computing"></a>
+        <h3>Cloud Computing: ₹20,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/Cybersecurity.jpeg' %}" alt="Cybersecurity"></a>
+        <h3>Cybersecurity: ₹20,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/Data Analytics.jpeg' %}" alt="Data Analytics"></a>
+        <h3>Data Analytics: ₹20,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/Data Science.jpeg' %}" alt="Data Science"></a>
+        <h3>Data Science: ₹20,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/Digital Marketing.jpeg' %}" alt="Digital Marketing"></a>
+        <h3>Digital Marketing: ₹20,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/Emerging Technologies.jpeg' %}" alt="Emerging Technologies"></a>
+        <h3>Emerging Technologies: ₹20,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/Game Development.jpeg' %}" alt="Game Development"></a>
+        <h3>Game Development: ₹20,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/Mobile App Development.jpeg' %}" alt="Mobile App Development"></a>
+        <h3>Mobile App Development: ₹20,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/Networking.jpeg' %}" alt="Networking"></a>
+        <h3>Networking: ₹20,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"> <img src="{% static 'images/Project Management.jpeg' %}" alt="Project Management"></a>
+        <h3>Project Management: ₹20,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/Software Development.jpeg' %}" alt="Software Development"></a>
+        <h3>Software Development: ₹20,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/UI UX Designs.jpeg' %}" alt="UI UX Designs"></a>
+        <h3>UI/UX Designs: ₹20,000</h3>
+    </div>
+    <div class="card-item">
+        <a href="{% url 'software' %}"><img src="{% static 'images/Software testing.jpeg'%}" alt="Software testing"></a>
+        <h3>Software testing:₹20,000</h3>
+    </div>
+</div>
+{% endblock%}
+</body>
+</html>

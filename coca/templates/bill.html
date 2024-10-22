@@ -1,0 +1,281 @@
+
+<!-- coca/templates/bill.html -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="{% static 'images/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <title>VTS Bill</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 0;
+            padding: 20px;
+            background-image: url("{% static 'images/background.jpg' %}"); /* Add your background image */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the image */
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            background-color: rgba(255, 255, 255, 0.9); /* Slight transparency for the container */
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+
+h1 {
+    text-align: center;
+    color: #fcfdff;
+    font-size: 32px;
+    margin-bottom: 10px;
+    background-color: #2186eb;
+    font-size: 30px;
+    font-family:"Audiowide", sans-serif;
+}
+
+h3 {
+    text-align: center;
+    color: #67b3ff;
+    margin-bottom: 5px;
+}
+
+h4 {
+    text-align: center;
+    color:  #67b3ff;
+    margin-bottom: 5px;
+}
+
+h5 {
+    text-align: center;
+    color: #67b3ff;
+    margin-bottom: 20px;
+}
+        .invoice-details {
+            margin: 20px 0;
+            border-top: 1px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+            font-size: 16px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .total {
+            font-weight: bold;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+        /* .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #666;
+        } */
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #28a745;
+            color: white;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 150px; 
+            height: auto;
+        }
+       
+
+.footer {
+    margin-top: 30px;
+    font-size: 14px;
+    color: #339fe7;
+    line-height: 1.6;
+}
+
+.footer h2 {
+    margin-bottom: 10px;
+    color: #2186eb;
+    text-align: center;
+}
+.footer h3{
+    color: #508fec;
+    font-size: 17px;
+}
+.footer ol {
+    padding-left: 1px;
+    font-family: Verdana, sans-serif;
+}
+
+.footer ol li {
+    margin-bottom: 1px;
+}
+
+.sign {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.sign ul {
+    list-style: none;
+    /* text-align: center; */
+    display:flex;
+   gap: 350px;
+   font-family: "Sofia", sans-serif;
+}
+
+.sign ul li {
+    margin-bottom: 60px; /* Space for signatures */
+    border-top: 1px solid #7f8c8d;
+    padding-top: 5px;
+    color: rgb(12, 125, 231);
+    
+
+}
+@media print {
+            button {
+                display: none; 
+            }
+            .footer {
+                page-break-after: always; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{% static 'images/logo.png' %}" alt="Company Logo">
+        </div>
+        <h1>VETRI TECHNOLOGY SOLUTIONS</h1>
+        <h3>IT TRAINING WITH 100% PLACEMENT</h3>
+        <h4>Contact us:+91 84385 58527 - +91 84385 58627</h4>
+        <h5> www.vetritechnologysolutions.in</h5>
+        <div class="invoice-details">
+            <table>
+                <tr>
+                    <th>Detail</th>
+                    <th>Information</th>
+                </tr>
+                <tr>
+                    <td><strong>Student Name:</strong></td>
+                    <td>{{ student_name }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Student Contact:</strong></td>
+                    <td>{{ student_contact }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Parent Name:</strong></td>
+                    <td>{{ parent_name }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Parent Contact:</strong></td>
+                    <td>{{ parent_contact }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Course:</strong></td>
+                    <td>{{ course }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Degree:</strong></td>
+                    <td>{{ degree }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Passed Out Year:</strong></td>
+                    <td>{{ passed_out_year }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Address:</strong></td>
+                    <td>{{ address }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Validity Date:</strong></td>
+                    <td>{{ validity_date }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Duration:</strong></td>
+                    <td>{{ duration }}</td>
+                </tr>
+                
+                <tr>
+                    <td><strong>Invoice ID:</strong></td>
+                    <td>{{ invoice.id }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Date:</strong></td>
+                    <td>{{ invoice.date }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Total:</strong></td>
+                    <td>₹{{ total }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Installment 1 Amount:</strong></td>
+                    <td>₹{{ invoice.installment1_amount }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Installment 1 Due Date:</strong></td>
+                    <td>{{ invoice.installment1_date }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Installment 2 Amount:</strong></td>
+                    <td>₹{{ invoice.installment2_amount }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Installment 2 Due Date:</strong></td>
+                    <td>{{ invoice.installment2_date }}</td>
+                </tr>
+
+            </table>
+        </div>
+        <button onclick="window.print();">Print Invoice</button>
+        <div class="footer">
+         <h2><u>Terms and Conditions:</u></h2>
+           <ol>
+            <li>Fees once paid will not be refunded at any case.</li>
+            <li>Students must complete their training before the validity date otherwise training registeration will be cancelled.</li>
+            <li>Once the training validity got expired trainee should pay penalty amount to rejoin the training.</li>
+            <li>If the trainee repairs or destroy any company assets trainee should afford to fix it.</li>
+            <li>Based on the training period performance attendance and internship performance salary package will be defined.</li>
+            </ol>
+            <h3>I agree to the above terms and Conditions</h3>
+            <div class="sign">
+                <ul>
+                    <li>Fraince Signature</li>
+                    <li>Centre Head Signature</li>
+                </ul>
+
+        </div>
+    </div>
+</body>
+</html>

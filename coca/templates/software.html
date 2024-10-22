@@ -1,0 +1,128 @@
+{% extends 'index.html' %}
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    
+</head>
+<body>
+    {% block contant%}
+  
+    <div class="con-frontend">
+        <h1>Frontend Development</h1>
+        <div class="details">
+            <div class="text">
+                <h3>Amount: 20,000</h3>
+                <h3>6 Months of Course</h3>
+                <h3>Technical Benefits:</h3>
+                <ul>
+                    <li>Responsive Design</li>
+                    <li>Fast Loading Speed</li>
+                    <li>Cross-Browser Compatibility</li>
+                    <li>Mobile-Friendliness</li>
+                    <li>Accessibility Compliance</li>
+                </ul>
+                <h3>Skills Required for Frontend Development:</h3>
+                <ol>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript (React, Angular, Vue)</li>
+                    <li>Responsive Design</li>
+                    <li>Mobile-First Development</li>
+                    <li>Accessibility</li>
+                    <li>UI/UX Design Principles</li>
+                    <li>Version Control (Git)</li>
+                    <li>Build Tools (Webpack, Gulp)</li>
+                </ol>
+                <h3>Tools Used in Frontend Development:</h3>
+                <ol>
+                    <li>Code Editors (VS Code, Sublime Text)</li>
+                    <li>Frontend Frameworks (React, Angular, Vue)</li>
+                    <li>Libraries (jQuery, Lodash)</li>
+                    <li>CSS Preprocessors (Sass, Less)</li>
+                    <li>Package Managers (npm, yarn)</li>
+                    <li>Debugging Tools (Chrome DevTools)</li>
+                </ol>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/Frontend Development.jpeg' %}" alt="Frontend Development" class="image">
+            </div>
+        </div>
+    </div>
+    {% endblock %}
+</body>
+</html>
+
+
+{% load static %}
+
+{% block content %}
+    <div class="con-frontend">
+        <h1>Frontend Development</h1>
+        <div class="details">
+            <div class="text">
+                <h3>Amount: 20,000</h3>
+                <h3>6 Months of Course</h3>
+                <h3>Technical Benefits:</h3>
+                <ul>
+                    <li>Responsive Design</li>
+                    <li>Fast Loading Speed</li>
+                    <li>Cross-Browser Compatibility</li>
+                    <li>Mobile-Friendliness</li>
+                    <li>Accessibility Compliance</li>
+                </ul>
+                <h3>Skills Required for Frontend Development:</h3>
+                <ol>
+                    <li>HTML/CSS</li>
+                    <li>JavaScript (React, Angular, Vue)</li>
+                    <li>Responsive Design</li>
+                    <li>Mobile-First Development</li>
+                    <li>Accessibility</li>
+                    <li>UI/UX Design Principles</li>
+                    <li>Version Control (Git)</li>
+                    <li>Build Tools (Webpack, Gulp)</li>
+                </ol>
+                <h3>Tools Used in Frontend Development:</h3>
+                <ol>
+                    <li>Code Editors (VS Code, Sublime Text)</li>
+                    <li>Frontend Frameworks (React, Angular, Vue)</li>
+                    <li>Libraries (jQuery, Lodash)</li>
+                    <li>CSS Preprocessors (Sass, Less)</li>
+                    <li>Package Managers (npm, yarn)</li>
+                    <li>Debugging Tools (Chrome DevTools)</li>
+                </ol>
+                <!-- Button to Open Modal -->
+                <button type="button" class="btn btn-primary mt-3" data-bs-toggle="modal" data-bs-target="#infoModal">
+                    Learn More
+                </button>
+            </div>
+            <div class="image-container">
+                <img src="{% static 'images/Frontend Development.jpeg' %}" alt="Frontend Development" class="image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Structure -->
+    <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="infoModalLabel">More About Frontend Development</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Frontend development involves creating the visual and interactive aspects of a website or application that users interact with directly. It requires a combination of technical skills and creative design to build responsive, user-friendly interfaces.</p>
+            <p>By enrolling in our 6-month course, you'll gain comprehensive knowledge and hands-on experience with the latest frontend technologies and best practices.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <a href="{% url 'enroll' %}" class="btn btn-primary">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
